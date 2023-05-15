@@ -31,17 +31,4 @@ To https://github.com/riyoneri/gym-git-exercise-solutions.git
  * [new branch]      main -> main
 branch 'main' set up to track 'origin/main'.
 
-$ git switch -c dev
-Switched to a new branch 'dev'
-
-$ git switch -c test
-Switched to a new branch 'test'
-
-$ git switch dev
-Switched to branch 'dev'
-M       README.md
-
-$ git branch -d test
-Deleted branch test (was 6eef24c).
-
 ```
