@@ -32,3 +32,11 @@ To https://github.com/riyoneri/gym-git-exercise-solutions.git
 branch 'main' set up to track 'origin/main'.
 
 ```
+
+### Exercise 2
+
+```bash
+$ git add home.html
+
+```
+
