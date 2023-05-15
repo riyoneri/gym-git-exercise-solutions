@@ -41,4 +41,7 @@ $ git switch dev
 Switched to branch 'dev'
 M       README.md
 
+$ git branch -d test
+Deleted branch test (was 6eef24c).
+
 ```
