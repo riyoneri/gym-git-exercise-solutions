@@ -122,3 +122,21 @@ $ git reset --hard
 HEAD is now at fef1455 Add about.html, home.html
 
 ```
+
+## Bundle 2
+
+### Exercise 1
+
+```bash
+
+$ git switch -c ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+
+$ git add services.html
+
+$ git commit -a -m "Add services.html"
+[ft/bundle-2 566a650] Add services.html
+ 1 file changed, 17 insertions(+)
+ create mode 100644 services.html
+
+```
