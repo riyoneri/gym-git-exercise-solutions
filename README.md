@@ -428,12 +428,7 @@ index 566495a..c8f8077 100644
 +++ b/README.md
 @@ -285,24 +285,22 @@ To https://github.com/riyoneri/gym-git-exercise-solutions.git
   * [new branch]      ft/bundle-2 -> ft/bundle-2
- ```
 
-+
- ## Bundle 2
-
--### Execercise 2 main
 
 RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/service-redesign)
 $ git merge main
