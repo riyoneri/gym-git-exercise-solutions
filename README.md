@@ -285,13 +285,70 @@ To https://github.com/riyoneri/gym-git-exercise-solutions.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 ```
 
+
 ## Bundle 2
 
-### Execercise 2 main
+### Execercise 2
 
 ```
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (main)
+$ git branch -c ft/service-redesign
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (main)
+$ git add .
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (main)
+$ git commit -m "add services"
+[main faeb3cb] add services
+ 1 file changed, 2 insertions(+)
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (main)
+$ git push
+To https://github.com/riyoneri/gym-git-exercise-solutions.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/riyoneri/gym-git-exercise-solutions.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (main)
+$ git branch
+  dev
+  ft/bundle-2
+  ft/service-redesign
+* main
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/main'.
+
 RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/service-redesign)
-$ git checkout main 
+$ git merge main 
+Updating caf9403..faeb3cb
+Fast-forward
+ services.html | 2 ++
+ 1 file changed, 2 insertions(+)
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/service-redesign)
+$ git push origin ft/service-redesign 
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 1.36 KiB | 279.00 KiB/s, done.
+Total 7 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/riyoneri/gym-git-exercise-solutions/pull/new/ft/service-redesign
+remote:
+To https://github.com/riyoneri/gym-git-exercise-solutions.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+
+ $ git checkout main 
 Switched to branch 'main'
 Your branch is ahead of 'origin/main' by 1 commit.
   (use "git push" to publish your local commits)
@@ -339,5 +396,58 @@ To https://github.com/riyoneri/gym-git-exercise-solutions.git
    a77c07e..878991f  main -> main
 
 RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (main)
+$ git add .
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (main)
+$ git commit -m "add terminal output to readme"
+[main 944c5e6] add terminal output to readme
+ 1 file changed, 57 insertions(+)
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.04 KiB | 355.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/riyoneri/gym-git-exercise-solutions.git
+   878991f..944c5e6  main -> main
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (main)
+$ git checkout ft/service-redesign 
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/service-redesign)
+$ git diff main
+diff --git a/README.md b/README.md
+index 566495a..c8f8077 100644
+--- a/README.md
++++ b/README.md
+@@ -285,24 +285,22 @@ To https://github.com/riyoneri/gym-git-exercise-solutions.git
+  * [new branch]      ft/bundle-2 -> ft/bundle-2
+ ```
+
++
+ ## Bundle 2
+
+-### Execercise 2 main
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/service-redesign)
+$ git merge main
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/service-redesign|MERGING)
+$ git add .
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/service-redesign|MERGING)
+$ git commit -m "resolve ft/service-redesign merging conflicts"
+[ft/service-redesign cd0442d] resolve ft/service-redesign merging conflicts
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/service-redesign)
 $
 ```
