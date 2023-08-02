@@ -446,3 +446,190 @@ $ git commit -m "resolve ft/service-redesign merging conflicts"
 RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/service-redesign)
 $
 ```
+
+
+## Bundle 3
+
+### Exercise 1
+
+```
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (main)
+$ git switch -c ft/team-page
+Switched to a new branch 'ft/team-page'
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/team-page)
+$ git add .
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/team-page)
+$ git commit -m "add somechanges to team.html"
+[ft/team-page 989fe3f] add somechanges to team.html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/team-page)
+$ git push origin ft/team-page 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 328 bytes | 164.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/riyoneri/gym-git-exercise-solutions/pull/new/ft/team-page
+remote:
+To https://github.com/riyoneri/gym-git-exercise-solutions.git
+ * [new branch]      ft/team-page -> ft/team-page
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (main)
+$ git switch -c ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/contact-page)
+$ git switch ft/team-page 
+Switched to branch 'ft/team-page'
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/team-page)
+$ git log
+commit 989fe3f606bd79ae8220555857b7dcecef40ed31 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Lionel Kaneza <lionkaneza@gmail.com>
+Date:   Mon Jul 31 17:43:16 2023 +0200
+
+    add somechanges to team.html
+
+commit 91d93a8c0b3cf298e96984f1183e2c53b1cc2aaa (origin/main, main, ft/contact-page)
+Merge: 0029316 d5a6b9a
+Author: Lionel Kaneza <113932119+riyoneri@users.noreply.github.com>
+Date:   Mon Jul 31 18:39:05 2023 +0300
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/team-page)
+$ git log --oneline 
+989fe3f (HEAD -> ft/team-page, origin/ft/team-page) add somechanges to team.html
+91d93a8 (origin/main, main, ft/contact-page) Merge pull request #5 from riyoneri/ft/service-redesign
+d5a6b9a (origin/ft/service-redesign, ft/service-redesign) correct erros in readme
+0029316 Merge pull request #4 from riyoneri/ft/service-redesign
+0e2b161 add terminal output to readme Bundle2 exercise2
+cd0442d resolve ft/service-redesign merging conflicts
+944c5e6 add terminal output to readme
+878991f Merge branch 'main' of https://github.com/riyoneri/gym-git-exercise-solutions
+7e960f0 add services
+d2b0ec6 add bundle2 exercise2 terminal output to readme
+faeb3cb add services
+a77c07e Merge pull request #3 from riyoneri/revert-2-ft/service-redesign
+07a27f9 Revert "add more services to services.html"
+85ad50d Merge pull request #2 from riyoneri/ft/service-redesign
+797a9a2 Merge branch 'main' into ft/service-redesign
+caf9403 add main services to services.html
+e4a427e add more services to services.html
+a7964f0 Merge pull request #1 from riyoneri/ft/bundle-2
+105671e (origin/ft/bundle-2, ft/bundle-2) add terminal output for bundle2#exercise1
+c74b051 add services.html
+50f63fe resolving error
+098e1dd add terminal for bundle1-exercise 2
+edc7e9a stash and stash pop home.html
+f5641e6 (dev) Add bundle1-exercise1 to readme
+34da32a Add Readme.md
+aacc023 Initial commit
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/team-page)
+$ git checkout ft/contact-page 
+Switched to branch 'ft/contact-page'
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/contact-page)
+$ git cherry
+cherry        cherry-pick
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/contact-page)
+$ git cherry
+cherry        cherry-pick
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/contact-page)
+$ git cherry
+cherry        cherry-pick
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/contact-page)
+$ git cherry-pick 989fe3f
+[ft/contact-page 7e6d314] add somechanges to team.html
+ Date: Mon Jul 31 17:43:16 2023 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/contact-page)
+$ git log --oneline 
+7e6d314 (HEAD -> ft/contact-page) add somechanges to team.html
+91d93a8 (origin/main, main) Merge pull request #5 from riyoneri/ft/service-redesign
+d5a6b9a (origin/ft/service-redesign, ft/service-redesign) correct erros in readme
+0029316 Merge pull request #4 from riyoneri/ft/service-redesign
+0e2b161 add terminal output to readme Bundle2 exercise2
+cd0442d resolve ft/service-redesign merging conflicts
+944c5e6 add terminal output to readme
+878991f Merge branch 'main' of https://github.com/riyoneri/gym-git-exercise-solutions
+7e960f0 add services
+d2b0ec6 add bundle2 exercise2 terminal output to readme
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/contact-page)
+$ git add .
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/contact-page)
+$ git commit -m "add contact.html"
+[ft/contact-page 5591d08] add contact.html
+ 1 file changed, 11 insertions(+)
+ create mode 100644 contact.html
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/contact-page)
+$ git push origin ft/contact-page 
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 726 bytes | 242.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/riyoneri/gym-git-exercise-solutions/pull/new/ft/contact-page
+remote:
+To https://github.com/riyoneri/gym-git-exercise-solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/contact-page)
+$ git switch -c ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/faq-page)
+$ git add .
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/faq-page)
+$ git commit -m "add faq.html"
+[ft/faq-page c82327c] add faq.html
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/faq-page)
+$ git push origin ft/faq-page 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 440 bytes | 220.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/riyoneri/gym-git-exercise-solutions/pull/new/ft/faq-page
+remote:
+To https://github.com/riyoneri/gym-git-exercise-solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/faq-page)
+$ git revert c82327c33f25fe5371150b0d5fedbd174670ef6a
+[ft/faq-page 10057e5] Revert "add faq.html"
+ 1 file changed, 11 deletions(-)
+ delete mode 100644 faq.html
+```
+
