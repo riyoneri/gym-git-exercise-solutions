@@ -909,3 +909,57 @@ RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 
 $
 ```
 
+## Bundle 4
+
+### Exercise 1
+
+```
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/home-page-redesign)
+$ git checkout main 
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (main)
+$ git remote add git-copy https://github.com/riyoneri/gym-git-exercise-solutions-copy.git
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (main)
+$ git remote -v
+git-copy        https://github.com/riyoneri/gym-git-exercise-solutions-copy.git (fetch)
+git-copy        https://github.com/riyoneri/gym-git-exercise-solutions-copy.git (push)
+origin  https://github.com/riyoneri/gym-git-exercise-solutions.git (fetch)
+origin  https://github.com/riyoneri/gym-git-exercise-solutions.git (push)
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (main)
+$ git add .
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (main)
+$ git commit -m "change index with git-copy"
+[main 2a222a6] change index with git-copy
+ 1 file changed, 1 insertion(+)
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 342 bytes | 342.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/riyoneri/gym-git-exercise-solutions.git
+   7c11d8f..2a222a6  main -> main
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (main)
+$ git push git-copy main
+Enumerating objects: 93, done.
+Counting objects: 100% (93/93), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (92/92), done.
+Writing objects: 100% (93/93), 20.26 KiB | 1.84 MiB/s, done.
+Total 93 (delta 45), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (45/45), done.
+To https://github.com/riyoneri/gym-git-exercise-solutions-copy.git
+ * [new branch]      main -> main
+```
+
