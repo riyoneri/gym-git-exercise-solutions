@@ -963,3 +963,257 @@ To https://github.com/riyoneri/gym-git-exercise-solutions-copy.git
  * [new branch]      main -> main
 ```
 
+## Bundle 4
+
+### Exercise 2
+
+```
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (main)
+$ git switch -c ft/squashing
+Switched to a new branch 'ft/squashing'
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/squashing)
+$ git merge squash --help
+usage: git merge [<options>] [<commit>...]
+   or: git merge --abort
+   or: git merge --continue
+
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --summary             (synonym to --stat)
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    -e, --edit            edit message before committing
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --ff                  allow fast-forward (default)
+    --ff-only             abort if fast-forward is not possible
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -m, --message <message>
+                          merge commit message (for a non-fast-forward merge)
+    -F, --file <path>     read message from file
+    --into-name <name>    use <name> instead of the real target
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --abort               abort the current in-progress merge
+    --quit                --abort but leave index and working tree alone
+    --continue            continue the current in-progress merge
+    --allow-unrelated-histories
+                          allow merging unrelated histories
+    --progress            force progress reporting
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --autostash           automatically stash/stash pop before and after
+    --overwrite-ignore    update ignored files (default)
+    --signoff             add a Signed-off-by trailer
+    --no-verify           bypass pre-merge-commit and commit-msg hooks
+
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/squashing)
+$ git merge --help
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/squashing)
+$ git squash --help
+git: 'squash' is not a git command. See 'git --help'.
+
+The most similar command is
+        stash
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/squashing)
+$ git merge squash -h
+usage: git merge [<options>] [<commit>...]
+   or: git merge --abort
+   or: git merge --continue
+
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --summary             (synonym to --stat)
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    -e, --edit            edit message before committing
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --ff                  allow fast-forward (default)
+    --ff-only             abort if fast-forward is not possible
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -m, --message <message>
+                          merge commit message (for a non-fast-forward merge)
+    -F, --file <path>     read message from file
+    --into-name <name>    use <name> instead of the real target
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --abort               abort the current in-progress merge
+    --quit                --abort but leave index and working tree alone
+    --continue            continue the current in-progress merge
+    --allow-unrelated-histories
+                          allow merging unrelated histories
+    --progress            force progress reporting
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --autostash           automatically stash/stash pop before and after
+    --overwrite-ignore    update ignored files (default)
+    --signoff             add a Signed-off-by trailer
+    --no-verify           bypass pre-merge-commit and commit-msg hooks
+
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/squashing)
+$ git merge --squash --help
+usage: git merge [<options>] [<commit>...]
+   or: git merge --abort
+   or: git merge --continue
+
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --summary             (synonym to --stat)
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    -e, --edit            edit message before committing
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --ff                  allow fast-forward (default)
+    --ff-only             abort if fast-forward is not possible
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -m, --message <message>
+                          merge commit message (for a non-fast-forward merge)
+    -F, --file <path>     read message from file
+    --into-name <name>    use <name> instead of the real target
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --abort               abort the current in-progress merge
+    --quit                --abort but leave index and working tree alone
+    --continue            continue the current in-progress merge
+    --allow-unrelated-histories
+                          allow merging unrelated histories
+    --progress            force progress reporting
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --autostash           automatically stash/stash pop before and after
+    --overwrite-ignore    update ignored files (default)
+    --signoff             add a Signed-off-by trailer
+    --no-verify           bypass pre-merge-commit and commit-msg hooks
+
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/squashing)
+$ git merge --squash --h
+error: unknown option `h'
+usage: git merge [<options>] [<commit>...]
+   or: git merge --abort
+   or: git merge --continue
+
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --summary             (synonym to --stat)
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    -e, --edit            edit message before committing
+    --cleanup <mode>      how to strip spaces and #comments from message
+    --ff                  allow fast-forward (default)
+    --ff-only             abort if fast-forward is not possible
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -m, --message <message>
+                          merge commit message (for a non-fast-forward merge)
+    -F, --file <path>     read message from file
+    --into-name <name>    use <name> instead of the real target
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --abort               abort the current in-progress merge
+    --quit                --abort but leave index and working tree alone
+    --continue            continue the current in-progress merge
+    --allow-unrelated-histories
+                          allow merging unrelated histories
+    --progress            force progress reporting
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --autostash           automatically stash/stash pop before and after
+    --overwrite-ignore    update ignored files (default)
+    --signoff             add a Signed-off-by trailer
+    --no-verify           bypass pre-merge-commit and commit-msg hooks
+
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/squashing)
+$ git merge --s
+--signoff           --squash            --stat              --strategy=         --strategy-option=  --summary
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/squashing)
+$ git merge --squash ft/footer 
+Updating bff1991..12c8a20
+Fast-forward
+Squash commit -- not updating HEAD
+ home.html | 2 ++
+ 1 file changed, 2 insertions(+)
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/squashing)
+$ git log --oneline 
+bff1991 (HEAD -> ft/squashing, origin/main, git-copy/main, main) add terminal history[bundle4-exercise1]
+2a222a6 change index with git-copy
+7c11d8f Merge pull request #9 from riyoneri/ft/home-page-redesign
+273d1f1 (origin/ft/home-page-redesign, ft/home-page-redesign) add terminal output[bundle3, exercise2]
+02ecdc2 add some changes in indes[ft/home-page-redesign]
+ff55d85 Merge branch 'main' of https://github.com/riyoneri/gym-git-exercise-solutions
+9d6d192 some new changes in main
+79ac37c Merge pull request #8 from riyoneri/ft/faq-page
+2445689 Merge pull request #7 from riyoneri/ft/contact-page
+4af2455 Merge pull request #6 from riyoneri/ft/team-page
+da2ae75 (origin/ft/faq-page, ft/faq-page) add terminal output bundle3 #exercise 1
+10057e5 Revert "add faq.html"
+e74dbc3 Revert "add somechanges to team.html"
+c82327c add faq.html
+5591d08 (origin/ft/contact-page, ft/contact-page) add contact.html
+7e6d314 add somechanges to team.html
+989fe3f (origin/ft/team-page, ft/team-page) add somechanges to team.html
+91d93a8 Merge pull request #5 from riyoneri/ft/service-redesign
+d5a6b9a (origin/ft/service-redesign, ft/service-redesign) correct erros in readme
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/squashing)
+$ git add .
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/squashing)
+$ git commit -m "footer changes squashing"
+[ft/squashing f7e6c7a] footer changes squashing
+ 1 file changed, 2 insertions(+)
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/squashing)
+$ git push origin ft/squashing 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 370 bytes | 370.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/riyoneri/gym-git-exercise-solutions/pull/new/ft/squashing
+remote:
+To https://github.com/riyoneri/gym-git-exercise-solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+
+RIYO@DESKTOP-DETFET6 MINGW64 /d/Codes/009 - Studies/001 - The-Gym/001 - git/002 - gym-git-exercise-solutions (ft/squashing)
+$
+```
+
